@@ -29,6 +29,6 @@ jobs:
 
       - name: Commit and push the zip
         run: |
-          git add pack.zip
+          git add SquidTweaks.zip
           git diff --cached --quiet || git commit -m "Auto-update SquidTweaks.zip"
           git push
