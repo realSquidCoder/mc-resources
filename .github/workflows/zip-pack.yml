@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'SquidTweaks.zip'  # Avoid infinite loops
+      - 'SquidTweaks.zip'        # Avoid infinite loops
+      - 'SquidTweaks.zip.sha1'   # Don't trigger on hash file
 
 jobs:
   zip-and-commit:
@@ -27,8 +28,13 @@ jobs:
           cd SquidTweaks
           zip -r ../SquidTweaks.zip .
 
-      - name: Commit and push the zip
+      - name: Compute SHA1 and write to file
         run: |
-          git add SquidTweaks.zip
-          git diff --cached --quiet || git commit -m "Auto-update SquidTweaks.zip"
+          sha1sum SquidTweaks.zip | cut -d ' ' -f 1 > SquidTweaks.zip.sha1
+          echo "SHA1 = $(cat SquidTweaks.zip.sha1)"
+
+      - name: Commit and push the zip + sha1
+        run: |
+          git add SquidTweaks.zip SquidTweaks.zip.sha1
+          git diff --cached --quiet || git commit -m "Auto-update SquidTweaks.zip and SHA1"
           git push
