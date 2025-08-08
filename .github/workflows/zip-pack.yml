@@ -33,8 +33,18 @@ jobs:
           sha1sum SquidTweaks.zip | cut -d ' ' -f 1 > SquidTweaks.zip.sha1
           echo "SHA1 = $(cat SquidTweaks.zip.sha1)"
 
+      - name: Zip the resource pack folder
+        run: |
+          cd SquidTweaksSuper
+          zip -r ../SquidTweaksSuper.zip .
+
+      - name: Compute SHA1 and write to file
+        run: |
+          sha1sum SquidTweaksSuper.zip | cut -d ' ' -f 1 > SquidTweaksSuper.zip.sha1
+          echo "SHA1 = $(cat SquidTweaksSuper.zip.sha1)"
+
       - name: Commit and push the zip + sha1
         run: |
-          git add SquidTweaks.zip SquidTweaks.zip.sha1
-          git diff --cached --quiet || git commit -m "Auto-update SquidTweaks.zip and SHA1"
+          git add SquidTweaks.zip SquidTweaks.zip.sha1 SquidTweaksSuper.zip SquidTweaksSuper.zip.sha1
+          git diff --cached --quiet || git commit -m "Auto-update zipped packs and SHA1"
           git push
