@@ -1,0 +1,89 @@
+{
+    "pack": {
+        "pack_format": 12,
+		"supported_formats": [12, 2147483647],
+        "description": "\u00a76Squid Tweaks\n\u00a7eFeaturing vanillatweaks.net"
+    },
+	"overlays": {
+		"entries": [
+            {
+            "directory": "Overlay-1_20",
+            "formats": [
+                16,
+                32
+            ]
+            },
+            {
+            "directory": "Overlay-1_21",
+            "formats": [
+                33,
+                64
+            ]
+            },
+			{
+				"formats": {"min_inclusive": 18, "max_inclusive": 2147483647},
+				"directory": "overlay_18"
+			},
+			{
+				"formats": {"min_inclusive": 20, "max_inclusive": 2147483647},
+				"directory": "overlay_20"
+			},
+			{
+				"formats": {"min_inclusive": 32, "max_inclusive": 2147483647},
+				"directory": "overlay_32"
+			},
+			{
+				"formats": {"min_inclusive": 34, "max_inclusive": 41},
+				"directory": "overlay_34_41"
+			},
+			{
+				"formats": { "min_inclusive": 34, "max_inclusive": 51 },
+				"directory": "overlay_34_51"
+			},
+			{
+				"formats": {"min_inclusive": 42, "max_inclusive": 64},
+				"directory": "overlay_42"
+			},
+			{
+				"formats": {"min_inclusive": 42, "max_inclusive": 46},
+				"directory": "overlay_42_46"
+			},
+			{
+				"formats": { "min_inclusive": 42, "max_inclusive": 51 },
+				"directory": "overlay_42_51"
+			},
+			{
+				"formats": { "min_inclusive": 42, "max_inclusive": 56 },
+				"directory": "overlay_42_56"
+			},
+			{
+				"formats": { "min_inclusive": 42, "max_inclusive": 57 },
+				"directory": "overlay_42_57"
+			},
+			{
+				"formats": {"min_inclusive": 46, "max_inclusive": 64},
+				"directory": "overlay_46"
+			},
+			{
+				"formats": {"min_inclusive": 53, "max_inclusive": 64},
+				"directory": "overlay_53"
+			},
+			{
+				"formats": {"min_inclusive": 52, "max_inclusive": 56},
+				"directory": "overlay_52_56"
+			},
+			{
+				"formats": {"min_inclusive": 55, "max_inclusive": 56},
+				"directory": "overlay_55_56"
+			},
+			{
+				"formats": { "min_inclusive": 57, "max_inclusive": 64 },
+				"directory": "overlay_57"
+			},
+			{
+				"formats": { "min_inclusive": 58, "max_inclusive": 64 },
+				"directory": "overlay_58"
+			}
+		]
+	}
+}
