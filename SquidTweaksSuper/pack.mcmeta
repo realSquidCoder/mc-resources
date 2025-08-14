@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 12,
+        "pack_format": 15,
 		"supported_formats": [12, 2147483647],
         "description": "\u00a76Squid Tweaks\n\u00a7eFeaturing vanillatweaks.net"
     },
